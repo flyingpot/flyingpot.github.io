@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +13,9 @@
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
 
 
 
@@ -84,13 +85,16 @@
 
 
 
+<meta name="description" content="一个没啥技术的“技术”博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="BLOG">
+<meta property="og:site_name" content="No Spoon">
+<meta property="og:description" content="一个没啥技术的“技术”博客">
 <meta property="og:updated_time" content="2017-01-23T12:14:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
+<meta name="twitter:description" content="一个没啥技术的“技术”博客">
 
 
 
@@ -98,10 +102,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -128,7 +132,7 @@
   
 
   
-    tags | BLOG
+    tags | No Spoon
   
 </title>
 </head>
@@ -146,36 +150,42 @@
 
 
 
+
+
+
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">BLOG</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">No Spoon</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">flyingpot's blog</p>
+      
   </div>
-    
-      <p class="site-subtitle"></p>
-    
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -236,7 +246,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">tags</h2>
+	<h1 class="post-title" itemprop="name headline">tags</h1>
 
 
 
@@ -248,7 +258,7 @@
     
   </div>
 
-          
+
           </div>
           
 
@@ -282,12 +292,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="fjb" />
-          <p class="site-author-name" itemprop="name">fjb</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+               alt="Fan Jingbo" />
+          <p class="site-author-name" itemprop="name">Fan Jingbo</p>
+           
+              <p class="site-description motion-element" itemprop="description">一个没啥技术的“技术”博客</p>
+          
         </div>
         <nav class="site-state motion-element">
-        
+
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
@@ -322,6 +334,8 @@
 
       
 
+      
+
     </div>
   </aside>
 
@@ -339,7 +353,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">fjb</span>
+  <span class="author" itemprop="copyrightHolder">Fan Jingbo</span>
 </div>
 
 
@@ -350,7 +364,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -361,9 +375,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -383,6 +401,8 @@
 
 
   
+
+
 
 
 
@@ -418,13 +438,6 @@
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
   
 
   
@@ -435,7 +448,6 @@
 
 
   
-
 
 
   
@@ -457,17 +469,22 @@
 
   
 
-  
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
-      <!-- UY END -->
-  
 
 
 
 
   
+
+
+
+
+
+
   
+
+
+
+
 
   
 
@@ -476,7 +493,6 @@
   
 
   
-
 
 </body>
 </html>

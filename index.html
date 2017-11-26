@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -106,7 +106,7 @@
 
 
 
-  <title> No Spoon </title>
+  <title> No Spoon </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +131,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -309,7 +309,7 @@
 <p>Tips: Robert S. Boyer和J Strother Moore两人在1977年提出了Boyer-Moore字符串搜索算法，也是一个很经典的算法</p>
 </blockquote>
 <h2 id="二、问题描述"><a href="#二、问题描述" class="headerlink" title="二、问题描述"></a>二、问题描述</h2><h3 id="1-Leetcode-169-Majority-Element"><a href="#1-Leetcode-169-Majority-Element" class="headerlink" title="1. Leetcode 169 (Majority Element)"></a>1. Leetcode 169 (Majority Element)</h3><blockquote>
-<p>给定含有$n$个元素的数组，寻找其主元素（出现超过$n/2$下界次的元素）</p>
+<p>给定含有n个元素的数组，寻找其主元素（出现超过n/2下界次的元素）</p>
 </blockquote>
 <h4 id="题解："><a href="#题解：" class="headerlink" title="题解："></a><strong>题解：</strong></h4><p>  本题有多种解法，排序，哈希表都可以AC。先说一下比较巧妙的排序法。</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums)</span>:</span></div><div class="line">      <span class="keyword">return</span> sorted(nums)[len(nums)//<span class="number">2</span>]</div></pre></td></tr></table></figure>
@@ -319,7 +319,7 @@
   <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums)</span>:</span></div><div class="line">      count = <span class="number">0</span></div><div class="line">      candidate = <span class="keyword">None</span></div><div class="line"></div><div class="line">      <span class="keyword">for</span> num <span class="keyword">in</span> nums:</div><div class="line">          <span class="keyword">if</span> count == <span class="number">0</span>:</div><div class="line">              candidate = num</div><div class="line">          count += (<span class="number">1</span> <span class="keyword">if</span> num == candidate <span class="keyword">else</span> <span class="number">-1</span>)</div><div class="line">          </div><div class="line">      <span class="keyword">return</span> candidate</div></pre></td></tr></table></figure>
 <p>  可以看出，BMMV算法思想很简单，初始化count为0，每当count为0时，candidate为数组中下一个数，遍历数组，如果数等于candidate，则count加一，否则减一，最后返回candidate即为主元素</p>
 <h3 id="2-Leetcode-229-Majority-Element-II"><a href="#2-Leetcode-229-Majority-Element-II" class="headerlink" title="2. Leetcode 229 (Majority Element II)"></a>2. Leetcode 229 (Majority Element II)</h3><blockquote>
-<p>给定含有$n$个元素的数组，寻找所有出现超过$n/3$下界次的元素</p>
+<p>给定含有n个元素的数组，寻找所有出现超过n/3下界次的元素</p>
 </blockquote>
 <h4 id="题解：-1"><a href="#题解：-1" class="headerlink" title="题解："></a><strong>题解：</strong></h4><blockquote>
 <p>Tips: 最多存在两个所求元素</p>
@@ -332,7 +332,7 @@
 <h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>BMMV算法可以看做是主元素相关问题的特解，而如果主元素个数要求变到n/k的话，使用BMMV算法无法写出一个通解。这时哈希表可以作为一种通解。</p>
 <h3 id="P-S"><a href="#P-S" class="headerlink" title="P.S."></a>P.S.</h3><p>Lintcode类似题的主元素个数的下界分别为n/2、n/3、n/k，并且加上了条件”There is only one majority number in the array”，这么一改题目立马变得很low，因为只要找到数组中出现最多的元素就可以了，代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span><span class="params">(self, nums)</span>:</span></div><div class="line">        counts = collections.Counter(nums)</div><div class="line">        <span class="keyword">return</span> max(counts.keys(), key=counts.get)</div></pre></td></tr></table></figure>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p>1.<a href="https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html" target="_blank" rel="external">Majority Voting Algorithm</a><br>2.<a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm" target="_blank" rel="external">Boyer–Moore majority vote algorithm (Wiki)</a></p>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p>1.<a href="https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html" target="_blank" rel="noopener">Majority Voting Algorithm</a><br>2.<a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm" target="_blank" rel="noopener">Boyer–Moore majority vote algorithm (Wiki)</a></p>
 
           
         
@@ -839,7 +839,24 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
